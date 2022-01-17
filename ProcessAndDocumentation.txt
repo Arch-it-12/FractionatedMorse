@@ -1,7 +1,7 @@
 Use this file as a "journal" of your activity.  Be sure to include links to all resources you used.
 
-NAME:
-Block:
+NAME:  Archit Ashok
+Block: Y
 
 DATE: 1/8 - 1/9 (optional)
 
@@ -21,4 +21,7 @@ DATE: 1/16
 
 DATE: 1/17
 
-
+I decided to do a two part cipher known as the fractionated morse cipher, which I found here:
+http://practicalcryptography.com/ciphers/classical-era/fractionated-morse/.  It is essentially a two part substitution
+cipher that uses morse code, and then a mixed alphabet key for each combination of three character (., -, x) (x
+indicating a character gap and xx indicating a space

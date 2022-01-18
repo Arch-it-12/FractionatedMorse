@@ -24,4 +24,18 @@ DATE: 1/17
 I decided to do a two part cipher known as the fractionated morse cipher, which I found here:
 http://practicalcryptography.com/ciphers/classical-era/fractionated-morse/.  It is essentially a two part substitution
 cipher that uses morse code, and then a mixed alphabet key for each combination of three character (., -, x) (x
-indicating a character gap and xx indicating a space
+indicating a character gap and xx indicating a space)
+
+I began by implementing the private fields, of which there are a few.  First, the key, which is just the alphabet in some random order,
+I also had a key part two, which I would append to the original key in order to create an associated list to the morese code list
+The morse code list was just all of the alphabet, all of the special characters, and then all of the number.
+
+There was also a special table which would be used to convert the morse code into the encoded letters.
+
+So the encode now just had to iterate through the message and append the associated morse code to a string builder.  If there was a space an xx would be added
+and there was an x between every character.  Now I made sure the character count was divisible by three for the next step.
+I now iterated through three characters at a time and replaced them in accordance to the special table, creating my encoded message.
+
+The decode literally did the exact same thing backwards.
+
+I now worked on the cipherapp, which was just a lot of input taking and checking.

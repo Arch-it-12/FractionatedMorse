@@ -58,7 +58,6 @@ public class FracMorse implements Cipherable {
         for(int i = 0; i < morseCode.length(); i+=3) {
             String m = morseCode.substring(i, i+3);
             int j = table.indexOf(m);
-            System.out.println(m);
             encoded.append(key.get(j));
         }
 

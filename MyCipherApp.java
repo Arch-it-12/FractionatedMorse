@@ -16,28 +16,34 @@ public class MyCipherApp {
     Cipherable l;
 
     switch (option) {
-      case 0 -> {
+      case 0:
         key = Integer.parseInt(checkInput(true));
         l = new CaesarCipher(key);
-      }
-      case 1 -> {
+        break;
+      case 1:
         key = Integer.parseInt(checkInput(true));
         l = new ModifiedRailFenceCipher(key);
-      }
-      case 2 -> {
+        break;
+      case 2:
         key1 = checkInput(false);
         l = new SubstitutionCipher(key1);
-      }
-      case 3 -> {
+        break;
+      case 3:
         key1 = checkInput(false);
         l = new FracMorse(key1);
-      }
-      default -> l = new CaesarCipher(1);
+        break;
+      default:
+        l = new CaesarCipher(1);
+        break;
     }
 
     switch (code) {
-      case 0 -> System.out.println(l.encode(message));
-      case 1 -> System.out.println(l.decode(message));
+      case 0:
+        System.out.println(l.encode(message));
+        break;
+      case 1:
+        System.out.println(l.decode(message));
+        break;
     }
   }
 
